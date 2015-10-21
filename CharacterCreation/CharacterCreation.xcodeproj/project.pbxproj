@@ -15,6 +15,10 @@
 		3D7843F91BD80171008A28C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7843F71BD80171008A28C9 /* LaunchScreen.storyboard */; };
 		3D7844041BD80171008A28C9 /* CharacterCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7844031BD80171008A28C9 /* CharacterCreationTests.m */; };
 		3D78440F1BD80171008A28C9 /* CharacterCreationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D78440E1BD80171008A28C9 /* CharacterCreationUITests.m */; };
+		3D78441E1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D78441D1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3D7844211BD80A14008A28C9 /* AMYCharacterImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7844201BD80A14008A28C9 /* AMYCharacterImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3D7844241BD80A40008A28C9 /* AMYCharacterSoFarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7844231BD80A40008A28C9 /* AMYCharacterSoFarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3D7844271BD80CDA008A28C9 /* AMYCharacterCreated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7844261BD80CDA008A28C9 /* AMYCharacterCreated.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		3D78440A1BD80171008A28C9 /* CharacterCreationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharacterCreationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D78440E1BD80171008A28C9 /* CharacterCreationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationUITests.m; sourceTree = "<group>"; };
 		3D7844101BD80171008A28C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D78441C1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYNameAndGenderChooserViewController.h; sourceTree = "<group>"; };
+		3D78441D1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYNameAndGenderChooserViewController.m; sourceTree = "<group>"; };
+		3D78441F1BD80A14008A28C9 /* AMYCharacterImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYCharacterImageViewController.h; sourceTree = "<group>"; };
+		3D7844201BD80A14008A28C9 /* AMYCharacterImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYCharacterImageViewController.m; sourceTree = "<group>"; };
+		3D7844221BD80A40008A28C9 /* AMYCharacterSoFarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYCharacterSoFarViewController.h; sourceTree = "<group>"; };
+		3D7844231BD80A40008A28C9 /* AMYCharacterSoFarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYCharacterSoFarViewController.m; sourceTree = "<group>"; };
+		3D7844251BD80CDA008A28C9 /* AMYCharacterCreated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYCharacterCreated.h; sourceTree = "<group>"; };
+		3D7844261BD80CDA008A28C9 /* AMYCharacterCreated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYCharacterCreated.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +115,17 @@
 			children = (
 				3D7843EC1BD80171008A28C9 /* AppDelegate.h */,
 				3D7843ED1BD80171008A28C9 /* AppDelegate.m */,
+				3D7844251BD80CDA008A28C9 /* AMYCharacterCreated.h */,
+				3D7844261BD80CDA008A28C9 /* AMYCharacterCreated.m */,
 				3D7843EF1BD80171008A28C9 /* ViewController.h */,
 				3D7843F01BD80171008A28C9 /* ViewController.m */,
 				3D7843F21BD80171008A28C9 /* Main.storyboard */,
+				3D78441C1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.h */,
+				3D78441D1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.m */,
+				3D78441F1BD80A14008A28C9 /* AMYCharacterImageViewController.h */,
+				3D7844201BD80A14008A28C9 /* AMYCharacterImageViewController.m */,
+				3D7844221BD80A40008A28C9 /* AMYCharacterSoFarViewController.h */,
+				3D7844231BD80A40008A28C9 /* AMYCharacterSoFarViewController.m */,
 				3D7843F51BD80171008A28C9 /* Assets.xcassets */,
 				3D7843F71BD80171008A28C9 /* LaunchScreen.storyboard */,
 				3D7843FA1BD80171008A28C9 /* Info.plist */,
@@ -270,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D78441E1BD809E1008A28C9 /* AMYNameAndGenderChooserViewController.m in Sources */,
 				3D7843F11BD80171008A28C9 /* ViewController.m in Sources */,
 				3D7843EE1BD80171008A28C9 /* AppDelegate.m in Sources */,
+				3D7844271BD80CDA008A28C9 /* AMYCharacterCreated.m in Sources */,
 				3D7843EB1BD80171008A28C9 /* main.m in Sources */,
+				3D7844241BD80A40008A28C9 /* AMYCharacterSoFarViewController.m in Sources */,
+				3D7844211BD80A14008A28C9 /* AMYCharacterImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

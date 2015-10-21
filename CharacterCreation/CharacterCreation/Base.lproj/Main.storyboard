@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ready to Create a Character?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-eF-Fcl">
-                                <rect key="frame" x="35" y="83" width="240" height="200"/>
+                                <rect key="frame" x="40" y="92" width="240" height="237"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Bc-mP1">
-                                <rect key="frame" x="111" y="348" width="98" height="75"/>
+                                <rect key="frame" x="111" y="410" width="98" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ready!"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="1055" y="327"/>
         </scene>
-        <!--View Controller-->
+        <!--Name And Gender Chooser View Controller-->
         <scene sceneID="eRl-j1-1po">
             <objects>
-                <viewController id="blw-AX-SL7" sceneMemberID="viewController">
+                <viewController id="blw-AX-SL7" customClass="AMYNameAndGenderChooserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jb6-aW-xAR"/>
                         <viewControllerLayoutGuide type="bottom" id="4eb-Kl-FGV"/>
@@ -88,6 +88,7 @@
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ready!"/>
                                 <connections>
+                                    <action selector="readyButtonTapped:" destination="blw-AX-SL7" eventType="touchUpInside" id="lCa-xL-BjX"/>
                                     <segue destination="L0H-mb-Mxa" kind="show" identifier="readyToChooseAnAvatarSegue" id="WVU-6t-BA4"/>
                                 </connections>
                             </button>
@@ -96,15 +97,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="isFemaleSwitch" destination="0Iw-ZM-zyP" id="kFm-I0-t85"/>
+                        <outlet property="nameTextField" destination="zy9-CP-FwY" id="DxS-T4-Rba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuV-uV-vSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1480" y="327"/>
         </scene>
-        <!--View Controller-->
+        <!--Character Image View Controller-->
         <scene sceneID="zgv-Ky-9oo">
             <objects>
-                <viewController id="L0H-mb-Mxa" sceneMemberID="viewController">
+                <viewController id="L0H-mb-Mxa" customClass="AMYCharacterImageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zNU-Yz-kfG"/>
                         <viewControllerLayoutGuide type="bottom" id="6KW-u7-Buk"/>
@@ -119,6 +124,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureOneButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WLl-3v-ykp"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureOneSegue" id="5cU-Fk-fI3"/>
                                 </connections>
                             </button>
@@ -128,6 +134,7 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureTwoButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="DBu-bk-rDy"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureTwoSegue" id="lgX-BF-6xA"/>
                                 </connections>
                             </button>
@@ -137,6 +144,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureThreeButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="Bdr-D8-3jb"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureThreeSegue" id="JNP-v3-d3a"/>
                                 </connections>
                             </button>
@@ -146,6 +154,7 @@
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.43044181030000001" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureFourButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="rv4-HU-PWX"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFourSegue" id="Qb1-ez-2va"/>
                                 </connections>
                             </button>
@@ -155,6 +164,7 @@
                                 <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureFiveButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="kTk-7w-5hR"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFiveSegue" id="ce3-AN-sOy"/>
                                 </connections>
                             </button>
@@ -164,6 +174,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.53380926724137934" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="pictureSixButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WHn-go-QlZ"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureSixSegue" id="aE6-jo-piP"/>
                                 </connections>
                             </button>
@@ -184,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="1889" y="327"/>
         </scene>
-        <!--View Controller-->
+        <!--Character So Far View Controller-->
         <scene sceneID="up0-hz-vMg">
             <objects>
-                <viewController id="ExY-6q-j0B" sceneMemberID="viewController">
+                <viewController id="ExY-6q-j0B" customClass="AMYCharacterSoFarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="27d-8d-9wP"/>
                         <viewControllerLayoutGuide type="bottom" id="DAp-3a-aDG"/>
@@ -214,6 +225,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="frd-fA-cgD" id="9Cw-uG-2MI"/>
+                        <outlet property="characterNameLabel" destination="eo2-XM-QU6" id="8BH-cy-u9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwv-8r-zaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,6 +256,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aE6-jo-piP"/>
+        <segue reference="5cU-Fk-fI3"/>
     </inferredMetricsTieBreakers>
 </document>
