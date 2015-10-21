@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="1480" y="327"/>
         </scene>
-        <!--Character Image View Controller-->
+        <!--Choose Wisely!-->
         <scene sceneID="zgv-Ky-9oo">
             <objects>
                 <viewController id="L0H-mb-Mxa" customClass="AMYCharacterImageViewController" sceneMemberID="viewController">
@@ -118,78 +118,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thC-dn-Gyx">
-                                <rect key="frame" x="62" y="140" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thC-dn-Gyx">
+                                <rect key="frame" x="5" y="65" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum1"/>
                                 <connections>
                                     <action selector="pictureOneButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WLl-3v-ykp"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureOneSegue" id="5cU-Fk-fI3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-XG-Cu4">
-                                <rect key="frame" x="217" y="140" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-XG-Cu4">
+                                <rect key="frame" x="153" y="65" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum2"/>
                                 <connections>
                                     <action selector="pictureTwoButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="DBu-bk-rDy"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureTwoSegue" id="lgX-BF-6xA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Y3-cOn">
-                                <rect key="frame" x="62" y="276" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Y3-cOn">
+                                <rect key="frame" x="5" y="230" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum3"/>
                                 <connections>
                                     <action selector="pictureThreeButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="Bdr-D8-3jb"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureThreeSegue" id="JNP-v3-d3a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-i4-ZMC">
-                                <rect key="frame" x="217" y="276" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-i4-ZMC">
+                                <rect key="frame" x="148" y="230" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.43044181030000001" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum4"/>
                                 <connections>
                                     <action selector="pictureFourButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="rv4-HU-PWX"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFourSegue" id="Qb1-ez-2va"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tos-cU-i5Z">
-                                <rect key="frame" x="62" y="398" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tos-cU-i5Z">
+                                <rect key="frame" x="0.0" y="395" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum5"/>
                                 <connections>
                                     <action selector="pictureFiveButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="kTk-7w-5hR"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFiveSegue" id="ce3-AN-sOy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSn-bJ-KDS">
-                                <rect key="frame" x="217" y="398" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSn-bJ-KDS">
+                                <rect key="frame" x="148" y="395" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.53380926724137934" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="WomNum6"/>
                                 <connections>
                                     <action selector="pictureSixButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WHn-go-QlZ"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureSixSegue" id="aE6-jo-piP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose wisely!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlE-mu-H41">
-                                <rect key="frame" x="102" y="89" width="116" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Choose Wisely!" id="SsA-DR-SlV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pictureFiveButton" destination="tos-cU-i5Z" id="wgM-QB-hMK"/>
+                        <outlet property="pictureFourButton" destination="deH-i4-ZMC" id="2rJ-wZ-TdU"/>
+                        <outlet property="pictureOneButton" destination="thC-dn-Gyx" id="zxv-Pb-flG"/>
+                        <outlet property="pictureSixButton" destination="aSn-bJ-KDS" id="oaY-9w-5cV"/>
+                        <outlet property="pictureThreeButton" destination="etP-Y3-cOn" id="CJo-fv-5j6"/>
+                        <outlet property="pictureTwoButton" destination="dFn-XG-Cu4" id="NRy-q4-NdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoq-QC-6G6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -212,8 +214,8 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-XM-QU6">
-                                <rect key="frame" x="136" y="355" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-XM-QU6">
+                                <rect key="frame" x="72" y="345" width="177" height="55"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -255,6 +257,14 @@
             <point key="canvasLocation" x="243" y="327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WomNum1" width="110" height="165"/>
+        <image name="WomNum2" width="110" height="165"/>
+        <image name="WomNum3" width="110" height="165"/>
+        <image name="WomNum4" width="120" height="165"/>
+        <image name="WomNum5" width="120" height="165"/>
+        <image name="WomNum6" width="120" height="165"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5cU-Fk-fI3"/>
     </inferredMetricsTieBreakers>

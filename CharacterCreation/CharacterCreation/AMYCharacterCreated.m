@@ -10,4 +10,14 @@
 
 @implementation AMYCharacterCreated
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _name = @"";
+        _genderIsFemale = YES;
+    }
+    return self;
+}
+
 @end

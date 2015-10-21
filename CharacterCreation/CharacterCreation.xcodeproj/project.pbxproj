@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D614A7C1BD827900016843C /* AMYCharacterDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D614A7B1BD827900016843C /* AMYCharacterDataStore.m */; settings = {ASSET_TAGS = (); }; };
 		3D7843EB1BD80171008A28C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7843EA1BD80171008A28C9 /* main.m */; };
 		3D7843EE1BD80171008A28C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7843ED1BD80171008A28C9 /* AppDelegate.m */; };
 		3D7843F11BD80171008A28C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7843F01BD80171008A28C9 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D614A7A1BD827900016843C /* AMYCharacterDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMYCharacterDataStore.h; sourceTree = "<group>"; };
+		3D614A7B1BD827900016843C /* AMYCharacterDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMYCharacterDataStore.m; sourceTree = "<group>"; };
 		3D7843E61BD80171008A28C9 /* CharacterCreation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterCreation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7843EA1BD80171008A28C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D7843EC1BD80171008A28C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				3D7843ED1BD80171008A28C9 /* AppDelegate.m */,
 				3D7844251BD80CDA008A28C9 /* AMYCharacterCreated.h */,
 				3D7844261BD80CDA008A28C9 /* AMYCharacterCreated.m */,
+				3D614A7A1BD827900016843C /* AMYCharacterDataStore.h */,
+				3D614A7B1BD827900016843C /* AMYCharacterDataStore.m */,
 				3D7843EF1BD80171008A28C9 /* ViewController.h */,
 				3D7843F01BD80171008A28C9 /* ViewController.m */,
 				3D7843F21BD80171008A28C9 /* Main.storyboard */,
@@ -295,6 +300,7 @@
 				3D7843EE1BD80171008A28C9 /* AppDelegate.m in Sources */,
 				3D7844271BD80CDA008A28C9 /* AMYCharacterCreated.m in Sources */,
 				3D7843EB1BD80171008A28C9 /* main.m in Sources */,
+				3D614A7C1BD827900016843C /* AMYCharacterDataStore.m in Sources */,
 				3D7844241BD80A40008A28C9 /* AMYCharacterSoFarViewController.m in Sources */,
 				3D7844211BD80A14008A28C9 /* AMYCharacterImageViewController.m in Sources */,
 			);
@@ -522,6 +528,7 @@
 				3D7844151BD80171008A28C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D7844161BD80171008A28C9 /* Build configuration list for PBXNativeTarget "CharacterCreationTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				3D7844181BD80171008A28C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D7844191BD80171008A28C9 /* Build configuration list for PBXNativeTarget "CharacterCreationUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +546,7 @@
 				3D78441B1BD80171008A28C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

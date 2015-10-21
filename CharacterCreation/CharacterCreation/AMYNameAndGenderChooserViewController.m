@@ -7,14 +7,14 @@
 //
 
 #import "AMYNameAndGenderChooserViewController.h"
-#import "AMYCharacterCreated.h"
+#import "AMYCharacterImageViewController.h"
 
 @interface AMYNameAndGenderChooserViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *isFemaleSwitch;
 
-@property (nonatomic, strong) AMYCharacterCreated *character;
+@property (nonatomic, strong) AMYCharacterDataStore *sharedCharacter;
 
 @end
 
@@ -27,13 +27,26 @@
 
 - (IBAction)readyButtonTapped:(id)sender
 {
-    self.character.name = self.nameTextField.text;
-    self.character.genderIsFemale = self.isFemaleSwitch;
+    self.sharedCharacter = [AMYCharacterDataStore sharedCharacterDataStore];
+    
+    self.sharedCharacter.character.name = self.nameTextField.text;
+    self.sharedCharacter.character.genderIsFemale = self.isFemaleSwitch;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // If gender is MALE, send it to male picture view.  If gender is FEMALE, send the female picture view.
+    AMYCharacterImageViewController *characterImageDVC = segue.destinationViewController;
+    if (self.sharedCharacter.character.genderIsFemale)
+    {
+        //send it to female pictures
+    }
+    else
+    {
+        // send it to male pictures
+    }
+    
+//    characterImageDVC.
+
 }
 
 @end

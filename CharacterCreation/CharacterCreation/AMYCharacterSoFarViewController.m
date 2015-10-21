@@ -11,7 +11,8 @@
 @interface AMYCharacterSoFarViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *characterNameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
+
+@property (nonatomic, strong) AMYCharacterDataStore *sharedCharacter;
 
 @end
 
@@ -21,6 +22,9 @@
 {
     [super viewDidLoad];
     
+    self.sharedCharacter = [AMYCharacterDataStore sharedCharacterDataStore];
+    
+    self.characterNameLabel.text = self.sharedCharacter.character.name;
     // self.characterNameLabel.text = name of the character we created earlier
     // picture is equal to the one that was on the button that sent us over here
 }

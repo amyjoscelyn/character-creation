@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMYCharacterSoFarViewController.h"
 
 @interface AMYCharacterImageViewController : UIViewController
 

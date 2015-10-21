@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AMYCharacterDataStore.h"
 
 @interface AMYCharacterSoFarViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 
 @end
