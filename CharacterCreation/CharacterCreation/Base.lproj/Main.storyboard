@@ -62,26 +62,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Iw-ZM-zyP">
-                                <rect key="frame" x="136" y="238" width="51" height="31"/>
-                                <animations/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-zr-2oF">
-                                <rect key="frame" x="209" y="243" width="56" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-xN-mRp">
-                                <rect key="frame" x="61" y="243" width="37" height="21"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.43044181030000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJp-kY-wHz">
                                 <rect key="frame" x="111" y="342" width="98" height="75"/>
                                 <animations/>
@@ -89,17 +69,25 @@
                                 <state key="normal" title="Ready!"/>
                                 <connections>
                                     <action selector="readyButtonTapped:" destination="blw-AX-SL7" eventType="touchUpInside" id="lCa-xL-BjX"/>
-                                    <segue destination="L0H-mb-Mxa" kind="show" identifier="readyToChooseAnAvatarSegue" id="WVU-6t-BA4"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
+                                <rect key="frame" x="101" y="207" width="119" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="isFemaleSwitch" destination="0Iw-ZM-zyP" id="kFm-I0-t85"/>
+                        <outlet property="genderSegmentedControl" destination="jhi-MY-nq2" id="9UL-OQ-k8H"/>
                         <outlet property="nameTextField" destination="zy9-CP-FwY" id="DxS-T4-Rba"/>
+                        <segue destination="L0H-mb-Mxa" kind="show" identifier="readyToChooseAnAvatarSegue" id="emX-M7-Uec"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuV-uV-vSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,62 +110,80 @@
                                 <rect key="frame" x="5" y="65" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="WomNum1"/>
                                 <connections>
                                     <action selector="pictureOneButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WLl-3v-ykp"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureOneSegue" id="5cU-Fk-fI3"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8S-Hm-TGh">
+                                <rect key="frame" x="5" y="69" width="150" height="161"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-XG-Cu4">
                                 <rect key="frame" x="153" y="65" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="WomNum2"/>
                                 <connections>
                                     <action selector="pictureTwoButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="DBu-bk-rDy"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureTwoSegue" id="lgX-BF-6xA"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgt-26-tW1">
+                                <rect key="frame" x="153" y="69" width="169" height="161"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Y3-cOn">
                                 <rect key="frame" x="5" y="230" width="164" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="WomNum3"/>
                                 <connections>
                                     <action selector="pictureThreeButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="Bdr-D8-3jb"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureThreeSegue" id="JNP-v3-d3a"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-YV-o9c">
+                                <rect key="frame" x="5" y="232" width="150" height="161"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-i4-ZMC">
                                 <rect key="frame" x="148" y="230" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.43044181030000001" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="WomNum4"/>
                                 <connections>
                                     <action selector="pictureFourButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="rv4-HU-PWX"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFourSegue" id="Qb1-ez-2va"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Vd-zc-8bm">
+                                <rect key="frame" x="163" y="232" width="150" height="161"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tos-cU-i5Z">
                                 <rect key="frame" x="0.0" y="395" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="WomNum5"/>
                                 <connections>
                                     <action selector="pictureFiveButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="kTk-7w-5hR"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFiveSegue" id="ce3-AN-sOy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzX-8K-DUK">
+                                <rect key="frame" x="5" y="399" width="150" height="161"/>
+                                <animations/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSn-bJ-KDS">
                                 <rect key="frame" x="148" y="395" width="174" height="165"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.53380926724137934" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="WomNum6"/>
                                 <connections>
                                     <action selector="pictureSixButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WHn-go-QlZ"/>
                                     <segue destination="ExY-6q-j0B" kind="show" identifier="pictureSixSegue" id="aE6-jo-piP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-pi-Kj7">
+                                <rect key="frame" x="163" y="397" width="150" height="161"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -185,12 +191,12 @@
                     <navigationItem key="navigationItem" title="Choose Wisely!" id="SsA-DR-SlV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="pictureFiveButton" destination="tos-cU-i5Z" id="wgM-QB-hMK"/>
-                        <outlet property="pictureFourButton" destination="deH-i4-ZMC" id="2rJ-wZ-TdU"/>
-                        <outlet property="pictureOneButton" destination="thC-dn-Gyx" id="zxv-Pb-flG"/>
-                        <outlet property="pictureSixButton" destination="aSn-bJ-KDS" id="oaY-9w-5cV"/>
-                        <outlet property="pictureThreeButton" destination="etP-Y3-cOn" id="CJo-fv-5j6"/>
-                        <outlet property="pictureTwoButton" destination="dFn-XG-Cu4" id="NRy-q4-NdQ"/>
+                        <outlet property="imageFiveView" destination="UzX-8K-DUK" id="f04-TZ-N3j"/>
+                        <outlet property="imageFourView" destination="1Vd-zc-8bm" id="0l7-Sl-uAJ"/>
+                        <outlet property="imageOneView" destination="h8S-Hm-TGh" id="GAa-hn-wd5"/>
+                        <outlet property="imageSixView" destination="Soo-pi-Kj7" id="4MD-wh-XqG"/>
+                        <outlet property="imageThreeView" destination="i9N-YV-o9c" id="Iba-H7-koU"/>
+                        <outlet property="imageTwoView" destination="Rgt-26-tW1" id="zZP-yV-ZDx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoq-QC-6G6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,14 +263,6 @@
             <point key="canvasLocation" x="243" y="327"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="WomNum1" width="110" height="165"/>
-        <image name="WomNum2" width="110" height="165"/>
-        <image name="WomNum3" width="110" height="165"/>
-        <image name="WomNum4" width="120" height="165"/>
-        <image name="WomNum5" width="120" height="165"/>
-        <image name="WomNum6" width="120" height="165"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5cU-Fk-fI3"/>
     </inferredMetricsTieBreakers>

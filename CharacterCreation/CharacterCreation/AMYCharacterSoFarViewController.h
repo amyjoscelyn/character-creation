@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AMYCharacterDataStore.h"
+#import "AMYCharacterCreated.h"
 
 @interface AMYCharacterSoFarViewController : UIViewController
 

@@ -10,12 +10,12 @@
 
 @interface AMYCharacterImageViewController ()
 
-@property (weak, nonatomic) IBOutlet UIButton *pictureOneButton;
-@property (weak, nonatomic) IBOutlet UIButton *pictureTwoButton;
-@property (weak, nonatomic) IBOutlet UIButton *pictureThreeButton;
-@property (weak, nonatomic) IBOutlet UIButton *pictureFourButton;
-@property (weak, nonatomic) IBOutlet UIButton *pictureFiveButton;
-@property (weak, nonatomic) IBOutlet UIButton *pictureSixButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageOneView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageTwoView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageThreeView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageFourView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageFiveView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageSixView;
 
 @end
 
@@ -25,6 +25,31 @@
 {
     [super viewDidLoad];
     
+    if (self.femaleSet)
+    {
+        UIImage *firstPhoto = [UIImage imageNamed:@"WomNum1"];
+        self.imageOneView.image = firstPhoto;
+    }
+    else
+    {
+        UIImage *firstPhoto = [UIImage imageNamed:@"ManNum1"];
+        self.imageOneView.image = firstPhoto;
+        
+        UIImage *secondPhoto = [UIImage imageNamed:@"ManNum2"];
+        self.imageTwoView.image = secondPhoto;
+        
+        UIImage *thirdPhoto = [UIImage imageNamed:@"ManNum3"];
+        self.imageThreeView.image = thirdPhoto;
+        
+        UIImage *fourthPhoto = [UIImage imageNamed:@"ManNum4"];
+        self.imageFourView.image = fourthPhoto;
+        
+        UIImage *fifthPhoto = [UIImage imageNamed:@"ManNum5"];
+        self.imageFiveView.image = fifthPhoto;
+        
+        UIImage *sixthPhoto = [UIImage imageNamed:@"ManNum6"];
+        self.imageSixView.image = sixthPhoto;
+    }
 }
 
 - (IBAction)pictureOneButtonTapped:(id)sender
@@ -53,12 +78,12 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AMYCharacterSoFarViewController *charSoFarDVC = segue.destinationViewController;
+//    AMYCharacterSoFarViewController *charSoFarDVC = segue.destinationViewController;
     
     if ([segue.identifier isEqualToString:@"pictureOneSegue"])
     {
         // characterimage = picture 1
-        charSoFarDVC.characterImageView.image = self.pictureOneButton.currentImage;
+//        charSoFarDVC.characterImageView.image = self.pictureOneButton.currentImage; even though it's imageView now
         //this doesn't work quite like i expect...
         //should i add the image view to the character stored data as well?
     }

@@ -11,4 +11,7 @@
 
 @interface AMYCharacterImageViewController : UIViewController
 
+@property (nonatomic) BOOL femaleSet;
+@property (nonatomic) BOOL maleSet;
+
 @end

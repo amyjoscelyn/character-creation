@@ -8,13 +8,15 @@
 
 #import "AMYNameAndGenderChooserViewController.h"
 #import "AMYCharacterImageViewController.h"
+#import "AMYCharacterCreated.h"
 
 @interface AMYNameAndGenderChooserViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UISwitch *isFemaleSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 
-@property (nonatomic, strong) AMYCharacterDataStore *sharedCharacter;
+
+@property (nonatomic, strong) AMYCharacterCreated *sharedCharacter;
 
 @end
 
@@ -27,26 +29,39 @@
 
 - (IBAction)readyButtonTapped:(id)sender
 {
-    self.sharedCharacter = [AMYCharacterDataStore sharedCharacterDataStore];
+    self.sharedCharacter = [AMYCharacterCreated sharedCharacter];
+
+    self.sharedCharacter.name = self.nameTextField.text;
     
-    self.sharedCharacter.character.name = self.nameTextField.text;
-    self.sharedCharacter.character.genderIsFemale = self.isFemaleSwitch;
+    NSUInteger genderIndex = self.genderSegmentedControl.selectedSegmentIndex;
+    
+    if (genderIndex == 0) {
+        self.sharedCharacter.male = YES;
+        self.sharedCharacter.female = NO;
+    }
+    else
+    {
+        self.sharedCharacter.male = NO;
+        self.sharedCharacter.female = YES;
+    }
+    
+    [self performSegueWithIdentifier:@"readyToChooseAnAvatarSegue" sender:nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     AMYCharacterImageViewController *characterImageDVC = segue.destinationViewController;
-    if (self.sharedCharacter.character.genderIsFemale)
+
+    if (self.sharedCharacter.female)
     {
-        //send it to female pictures
+        characterImageDVC.femaleSet = YES;
+        characterImageDVC.maleSet = NO;
     }
     else
     {
-        // send it to male pictures
+        characterImageDVC.femaleSet = NO;
+        characterImageDVC.maleSet = YES;
     }
-    
-//    characterImageDVC.
-
 }
 
 @end

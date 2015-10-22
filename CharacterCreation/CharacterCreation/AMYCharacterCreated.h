@@ -11,6 +11,9 @@
 @interface AMYCharacterCreated : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic) BOOL genderIsFemale;
+@property (nonatomic) BOOL female;
+@property (nonatomic) BOOL male;
+
++ (instancetype)sharedCharacter;
 
 @end
