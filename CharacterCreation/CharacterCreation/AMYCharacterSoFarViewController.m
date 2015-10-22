@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *characterNameLabel;
 
-@property (nonatomic, strong) AMYCharacterDataStore *sharedCharacter;
+@property (nonatomic, strong) AMYCharacterCreated *sharedCharacter;
 
 @end
 
@@ -22,11 +22,13 @@
 {
     [super viewDidLoad];
     
-    self.sharedCharacter = [AMYCharacterDataStore sharedCharacterDataStore];
+    self.characterImageView.image = self.characterImage;
     
-    self.characterNameLabel.text = self.sharedCharacter.character.name;
+    self.sharedCharacter = [AMYCharacterCreated sharedCharacter];
+    
+    self.characterNameLabel.text = self.sharedCharacter.name;
     // self.characterNameLabel.text = name of the character we created earlier
-    // picture is equal to the one that was on the button that sent us over here
+    // picture is equal to the one that was under the button that sent us over here
 }
 
 @end

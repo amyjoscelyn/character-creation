@@ -17,6 +17,16 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageFiveView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageSixView;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonOne;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTwo;
+@property (weak, nonatomic) IBOutlet UIButton *buttonThree;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFour;
+@property (weak, nonatomic) IBOutlet UIButton *buttonFive;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSix;
+
+@property (strong, nonatomic) NSArray *arrayOfButtons;
+@property (strong, nonatomic) NSArray *arrayOfImages;
+
 @end
 
 @implementation AMYCharacterImageViewController
@@ -25,10 +35,29 @@
 {
     [super viewDidLoad];
     
+    self.arrayOfButtons = @[ self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix ];
+
+    self.arrayOfImages = @[ self.imageOneView, self.imageTwoView, self.imageThreeView, self.imageFourView, self.imageFiveView, self.imageSixView ];
+    
     if (self.femaleSet)
     {
         UIImage *firstPhoto = [UIImage imageNamed:@"WomNum1"];
         self.imageOneView.image = firstPhoto;
+        
+        UIImage *secondPhoto = [UIImage imageNamed:@"WomNum2"];
+        self.imageTwoView.image = secondPhoto;
+        
+        UIImage *thirdPhoto = [UIImage imageNamed:@"WomNum3"];
+        self.imageThreeView.image = thirdPhoto;
+        
+        UIImage *fourthPhoto = [UIImage imageNamed:@"WomNum4"];
+        self.imageFourView.image = fourthPhoto;
+        
+        UIImage *fifthPhoto = [UIImage imageNamed:@"WomNum5"];
+        self.imageFiveView.image = fifthPhoto;
+        
+        UIImage *sixthPhoto = [UIImage imageNamed:@"WomNum6"];
+        self.imageSixView.image = sixthPhoto;
     }
     else
     {
@@ -78,36 +107,52 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    AMYCharacterSoFarViewController *charSoFarDVC = segue.destinationViewController;
     
-    if ([segue.identifier isEqualToString:@"pictureOneSegue"])
+    NSInteger indexOfButton = 0;
+    
+    for (NSInteger i = 0; i < self.arrayOfButtons.count; i++)
     {
-        // characterimage = picture 1
-//        charSoFarDVC.characterImageView.image = self.pictureOneButton.currentImage; even though it's imageView now
-        //this doesn't work quite like i expect...
-        //should i add the image view to the character stored data as well?
-    }
-    else if ([segue.identifier isEqualToString:@"pictureTwoSegue"])
-    {
-        // character image = pic 2
-    }
-    else if ([segue.identifier isEqualToString:@"pictureThreeSegue"])
-    {
-        // pic 3
-    }
-    else if ([segue.identifier isEqualToString:@"pictureFourSegue"])
-    {
-        // pic 4
-    }
-    else if ([segue.identifier isEqualToString:@"pictureFiveSegue"])
-    {
-        // 5
-    }
-    else
-    {
-        //6
+        UIButton *currentButton = self.arrayOfButtons[i];
+        
+        if ([currentButton isEqual:sender])
+        {
+            indexOfButton = i;
+        }
     }
     
+    
+    UIImageView *currentImageView = self.arrayOfImages[indexOfButton];
+    
+    UIImage *imageToPassForward = currentImageView.image;
+    
+    AMYCharacterSoFarViewController *charSoFarDVC = segue.destinationViewController;
+    
+    charSoFarDVC.characterImage = imageToPassForward;
+    
+//    if ([segue.identifier isEqualToString:@"pictureOneSegue"])
+//    {
+//        charSoFarDVC.characterImage = self.imageOneView.image;
+//    }
+//    else if ([segue.identifier isEqualToString:@"pictureTwoSegue"])
+//    {
+//        charSoFarDVC.characterImage = self.imageTwoView.image;
+//    }
+//    else if ([segue.identifier isEqualToString:@"pictureThreeSegue"])
+//    {
+//        charSoFarDVC.characterImage = self.imageThreeView.image;
+//    }
+//    else if ([segue.identifier isEqualToString:@"pictureFourSegue"])
+//    {
+//        charSoFarDVC.characterImage = self.imageFourView.image;
+//    }
+//    else if ([segue.identifier isEqualToString:@"pictureFiveSegue"])
+//    {
+//        charSoFarDVC.characterImage = self.imageFiveView.image;
+//    }
+//    else
+//    {
+//        charSoFarDVC.characterImage = self.imageSixView.image;
+//    }
 }
 
 @end

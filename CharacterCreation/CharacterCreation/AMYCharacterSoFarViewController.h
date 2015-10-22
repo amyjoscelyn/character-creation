@@ -13,4 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
 
+
+@property (strong, nonatomic) UIImage *characterImage;
+
 @end
