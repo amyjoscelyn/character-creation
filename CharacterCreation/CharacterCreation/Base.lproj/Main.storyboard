@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Bc-mP1">
-                                <rect key="frame" x="111" y="410" width="98" height="75"/>
+                                <rect key="frame" x="111" y="415" width="98" height="75"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Ready!"/>
@@ -32,9 +32,17 @@
                                     <segue destination="blw-AX-SL7" kind="show" identifier="readyToPickANameSegue" id="QcS-61-nGt"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-dN-11O">
+                                <rect key="frame" x="40" y="312" width="240" height="217"/>
+                                <animations/>
+                                <string key="text">I would like to focus on making the Ready! buttons at the same place in each screen, maybe putting in an image at the bottom or middle of the second screen to fill in space, add a frame to make it prettier around the outside and not so flat, maybe get the purple of a velvet dress as background, work on gradients, perhaps, center all of my things, make buttons the same size and place, and just get it all going.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="m1D-k6-DV4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -81,7 +89,7 @@
                             </segmentedControl>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -187,7 +195,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Choose Wisely!" id="SsA-DR-SlV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -237,7 +245,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
