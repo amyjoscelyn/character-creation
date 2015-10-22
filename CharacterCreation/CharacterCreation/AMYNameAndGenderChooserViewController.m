@@ -32,6 +32,11 @@
 
     self.sharedCharacter.name = self.nameTextField.text;
     
+    BOOL nameIsValid = [self validName];
+    if (!nameIsValid)
+    {
+        return;
+    }
     NSUInteger genderIndex = self.genderSegmentedControl.selectedSegmentIndex;
     
     if (genderIndex == 0)
@@ -45,6 +50,17 @@
         self.sharedCharacter.female = YES;
     }
     [self performSegueWithIdentifier:@"readyToChooseAnAvatarSegue" sender:nil];
+}
+
+- (BOOL)validName
+{
+    NSString *name = self.sharedCharacter.name;
+    if (name.length == 0)
+    {
+        NSLog(@"Please enter a name.");
+        return NO;
+    }
+    return YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
