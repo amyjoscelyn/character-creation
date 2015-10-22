@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     self.arrayOfButtons = @[ self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix ];
-
+    
     self.arrayOfImages = @[ self.imageOneView, self.imageTwoView, self.imageThreeView, self.imageFourView, self.imageFiveView, self.imageSixView ];
     
     if (self.femaleSet)
@@ -81,33 +81,21 @@
     }
 }
 
-- (IBAction)pictureOneButtonTapped:(id)sender
-{
+- (IBAction)pictureOneButtonTapped:(id)sender {
 }
-
-- (IBAction)pictureTwoButtonTapped:(id)sender
-{
+- (IBAction)pictureTwoButtonTapped:(id)sender {
 }
-
-- (IBAction)pictureThreeButtonTapped:(id)sender
-{
+- (IBAction)pictureThreeButtonTapped:(id)sender {
 }
-
-- (IBAction)pictureFourButtonTapped:(id)sender
-{
+- (IBAction)pictureFourButtonTapped:(id)sender {
 }
-
-- (IBAction)pictureFiveButtonTapped:(id)sender
-{
+- (IBAction)pictureFiveButtonTapped:(id)sender {
 }
-
-- (IBAction)pictureSixButtonTapped:(id)sender
-{
+- (IBAction)pictureSixButtonTapped:(id)sender {
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
     NSInteger indexOfButton = 0;
     
     for (NSInteger i = 0; i < self.arrayOfButtons.count; i++)
@@ -119,40 +107,11 @@
             indexOfButton = i;
         }
     }
-    
-    
     UIImageView *currentImageView = self.arrayOfImages[indexOfButton];
-    
     UIImage *imageToPassForward = currentImageView.image;
     
     AMYCharacterSoFarViewController *charSoFarDVC = segue.destinationViewController;
-    
     charSoFarDVC.characterImage = imageToPassForward;
-    
-//    if ([segue.identifier isEqualToString:@"pictureOneSegue"])
-//    {
-//        charSoFarDVC.characterImage = self.imageOneView.image;
-//    }
-//    else if ([segue.identifier isEqualToString:@"pictureTwoSegue"])
-//    {
-//        charSoFarDVC.characterImage = self.imageTwoView.image;
-//    }
-//    else if ([segue.identifier isEqualToString:@"pictureThreeSegue"])
-//    {
-//        charSoFarDVC.characterImage = self.imageThreeView.image;
-//    }
-//    else if ([segue.identifier isEqualToString:@"pictureFourSegue"])
-//    {
-//        charSoFarDVC.characterImage = self.imageFourView.image;
-//    }
-//    else if ([segue.identifier isEqualToString:@"pictureFiveSegue"])
-//    {
-//        charSoFarDVC.characterImage = self.imageFiveView.image;
-//    }
-//    else
-//    {
-//        charSoFarDVC.characterImage = self.imageSixView.image;
-//    }
 }
 
 @end

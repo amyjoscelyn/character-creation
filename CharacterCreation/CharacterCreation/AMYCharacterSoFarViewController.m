@@ -22,13 +22,10 @@
 {
     [super viewDidLoad];
     
-    self.characterImageView.image = self.characterImage;
-    
     self.sharedCharacter = [AMYCharacterCreated sharedCharacter];
     
+    self.characterImageView.image = self.characterImage;
     self.characterNameLabel.text = self.sharedCharacter.name;
-    // self.characterNameLabel.text = name of the character we created earlier
-    // picture is equal to the one that was under the button that sent us over here
 }
 
 @end

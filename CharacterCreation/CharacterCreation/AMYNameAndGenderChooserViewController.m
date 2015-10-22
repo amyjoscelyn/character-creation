@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentedControl;
 
-
 @property (nonatomic, strong) AMYCharacterCreated *sharedCharacter;
 
 @end
@@ -35,7 +34,8 @@
     
     NSUInteger genderIndex = self.genderSegmentedControl.selectedSegmentIndex;
     
-    if (genderIndex == 0) {
+    if (genderIndex == 0)
+    {
         self.sharedCharacter.male = YES;
         self.sharedCharacter.female = NO;
     }
@@ -44,7 +44,6 @@
         self.sharedCharacter.male = NO;
         self.sharedCharacter.female = YES;
     }
-    
     [self performSegueWithIdentifier:@"readyToChooseAnAvatarSegue" sender:nil];
 }
 

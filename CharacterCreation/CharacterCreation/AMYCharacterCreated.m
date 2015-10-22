@@ -9,7 +9,9 @@
 #import "AMYCharacterCreated.h"
 
 @implementation AMYCharacterCreated
-+ (instancetype)sharedCharacter {
+
++ (instancetype)sharedCharacter
+{
     static AMYCharacterCreated *_sharedCharacter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -28,7 +30,5 @@
     }
     return self;
 }
-
-
 
 @end
