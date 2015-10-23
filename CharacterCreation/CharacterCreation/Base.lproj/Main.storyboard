@@ -472,22 +472,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-XM-QU6">
-                                <rect key="frame" x="72" y="345" width="177" height="55"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OqR-fT-JeH" userLabel="Major Stack">
+                                <rect key="frame" x="100" y="104" width="120" height="360"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frd-fA-cgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="165"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="4n6-aj-Xjn"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="AFe-gz-Yzn"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="T6A-TA-i85"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="165" id="TUN-dX-XP1"/>
+                                            <constraint firstAttribute="height" constant="197" id="XlA-TS-amQ"/>
+                                            <constraint firstAttribute="width" constant="186" id="zvq-fl-053"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="XlA-TS-amQ"/>
+                                                <exclude reference="zvq-fl-053"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J1q-92-fdR" userLabel="Minor Stack">
+                                        <rect key="frame" x="12" y="195" width="96" height="165"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldf-hS-6KE">
+                                                <rect key="frame" x="13" y="0.0" width="71" height="55"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-XM-QU6">
+                                                <rect key="frame" x="26" y="55" width="45" height="55"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to the world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXZ-de-62d">
+                                                <rect key="frame" x="0.0" y="110" width="96" height="55"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frd-fA-cgD">
-                                <rect key="frame" x="67" y="97" width="186" height="197"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OqR-fT-JeH" firstAttribute="centerY" secondItem="mmc-Wo-Ogf" secondAttribute="centerY" id="kKs-1N-Nn5"/>
+                            <constraint firstItem="OqR-fT-JeH" firstAttribute="centerX" secondItem="mmc-Wo-Ogf" secondAttribute="centerX" id="ubn-r4-5XD"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
