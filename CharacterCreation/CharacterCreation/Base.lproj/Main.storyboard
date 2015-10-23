@@ -155,7 +155,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
                                                 <rect key="frame" x="13" y="65" width="117" height="31"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
@@ -236,7 +236,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oXO-Ft-z9A" userLabel="Left Column Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="504"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-ZN-GQJ">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-ZN-GQJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="163"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h8S-Hm-TGh">
@@ -246,7 +246,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thC-dn-Gyx" userLabel="Button One">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="163"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.11764705882352941" green="0.039215686274509803" blue="0.20392156862745098" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="" label=""/>
                                                         <connections>
                                                             <action selector="pictureOneButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WLl-3v-ykp"/>
@@ -283,7 +283,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-3P-KMU">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7a0-3P-KMU">
                                                 <rect key="frame" x="0.0" y="171" width="140" height="162"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9N-YV-o9c">
@@ -293,7 +293,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etP-Y3-cOn" userLabel="Button Three">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="162"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.60191271550000003" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="pictureThreeButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="Bdr-D8-3jb"/>
                                                             <segue destination="ExY-6q-j0B" kind="show" identifier="pictureThreeSegue" id="JNP-v3-d3a"/>
@@ -337,7 +337,7 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXY-Fy-6wH">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IXY-Fy-6wH">
                                                 <rect key="frame" x="0.0" y="341" width="140" height="163"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UzX-8K-DUK">
@@ -347,7 +347,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tos-cU-i5Z" userLabel="Button Five">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="163"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="pictureFiveButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="kTk-7w-5hR"/>
                                                             <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFiveSegue" id="ce3-AN-sOy"/>
@@ -405,7 +405,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-XG-Cu4" userLabel="Button Two">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="163"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="pictureTwoButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="DBu-bk-rDy"/>
                                                             <segue destination="ExY-6q-j0B" kind="show" identifier="pictureTwoSegue" id="lgX-BF-6xA"/>
@@ -453,7 +453,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-i4-ZMC" userLabel="Button Four">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="162"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.43044181030000001" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="pictureFourButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="rv4-HU-PWX"/>
                                                             <segue destination="ExY-6q-j0B" kind="show" identifier="pictureFourSegue" id="Qb1-ez-2va"/>
@@ -509,7 +509,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSn-bJ-KDS" userLabel="Button Six">
                                                         <rect key="frame" x="0.0" y="0.0" width="140" height="163"/>
                                                         <animations/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.53380926724137934" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                                                         <connections>
                                                             <action selector="pictureSixButtonTapped:" destination="L0H-mb-Mxa" eventType="touchUpInside" id="WHn-go-QlZ"/>
                                                             <segue destination="ExY-6q-j0B" kind="show" identifier="pictureSixSegue" id="aE6-jo-piP"/>
