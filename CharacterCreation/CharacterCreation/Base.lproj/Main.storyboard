@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MiX-cd-wk5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,24 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ready to Create a Character?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-eF-Fcl">
-                                <rect key="frame" x="40" y="92" width="240" height="237"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ready to Create a Character?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zMl-eF-Fcl">
+                                <rect key="frame" x="16" y="64" width="288" height="284"/>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="0.63367456899999997" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.73721955130000005" green="0.73721955130000005" blue="0.73721955130000005" alpha="0.29453125000000002" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Bc-mP1">
-                                <rect key="frame" x="111" y="415" width="98" height="75"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-dn-BUy">
+                                <rect key="frame" x="16" y="284" width="288" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Bc-mP1">
+                                        <rect key="frame" x="82" y="105" width="125" height="75"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="nmw-qJ-3h0"/>
+                                            <constraint firstAttribute="height" constant="75" id="xbB-g9-bz6"/>
+                                        </constraints>
+                                        <state key="normal" title="Ready!"/>
+                                        <connections>
+                                            <segue destination="blw-AX-SL7" kind="show" identifier="readyToPickANameSegue" id="QcS-61-nGt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Ready!"/>
-                                <connections>
-                                    <segue destination="blw-AX-SL7" kind="show" identifier="readyToPickANameSegue" id="QcS-61-nGt"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="0.87538060900000003" green="0.87538060900000003" blue="0.87538060900000003" alpha="0.29453125000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="U2o-Bc-mP1" firstAttribute="centerY" secondItem="dN1-dn-BUy" secondAttribute="centerY" id="9sL-rg-vuD"/>
+                                    <constraint firstItem="U2o-Bc-mP1" firstAttribute="centerX" secondItem="dN1-dn-BUy" secondAttribute="centerX" id="ted-l6-HHh"/>
+                                </constraints>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-dN-11O">
-                                <rect key="frame" x="40" y="312" width="240" height="217"/>
+                                <rect key="frame" x="40" y="97" width="240" height="217"/>
                                 <animations/>
                                 <string key="text">I would like to focus on making the Ready! buttons at the same place in each screen, maybe putting in an image at the bottom or middle of the second screen to fill in space, add a frame to make it prettier around the outside and not so flat, maybe get the purple of a velvet dress as background, work on gradients, perhaps, center all of my things, make buttons the same size and place, and just get it all going.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +60,32 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dN1-dn-BUy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="3ir-4Z-Wuo"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Fru-42-2Ln"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HeM-s1-OQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dN1-dn-BUy" secondAttribute="trailing" id="OR3-5B-kk2"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="QY5-sU-CuX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" id="e1A-kE-9gN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dN1-dn-BUy" secondAttribute="trailing" constant="20" id="g1L-H7-CxB"/>
+                            <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="h6n-nd-cyB"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="k0V-6D-Fbn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zMl-eF-Fcl" secondAttribute="trailing" constant="20" id="nH5-l4-OZV"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uoi-dr-hXS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zMl-eF-Fcl" secondAttribute="trailing" id="wdO-QX-D7f"/>
+                            <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xGE-ZP-xcI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" constant="54" id="xWo-2D-jPG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Fru-42-2Ln"/>
+                                <exclude reference="k0V-6D-Fbn"/>
+                                <exclude reference="nH5-l4-OZV"/>
+                                <exclude reference="g1L-H7-CxB"/>
+                                <exclude reference="h6n-nd-cyB"/>
+                                <exclude reference="xWo-2D-jPG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="m1D-k6-DV4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -63,33 +106,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of character" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy9-CP-FwY">
-                                <rect key="frame" x="56" y="139" width="209" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bU6-Pv-KiR">
+                                <rect key="frame" x="16" y="284" width="288" height="284"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJp-kY-wHz">
+                                        <rect key="frame" x="82" y="105" width="125" height="75"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="6Zg-M4-EGQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="SDt-Qh-lFx"/>
+                                            <constraint firstAttribute="width" constant="98" id="jZ4-dH-eR4"/>
+                                        </constraints>
+                                        <state key="normal" title="Ready!"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="jZ4-dH-eR4"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="readyButtonTapped:" destination="blw-AX-SL7" eventType="touchUpInside" id="lCa-xL-BjX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJp-kY-wHz">
-                                <rect key="frame" x="111" y="342" width="98" height="75"/>
+                                <color key="backgroundColor" red="0.87538060897435899" green="0.87538060897435899" blue="0.87538060897435899" alpha="0.29453125000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cJp-kY-wHz" firstAttribute="centerY" secondItem="bU6-Pv-KiR" secondAttribute="centerY" id="GtV-Db-sOX"/>
+                                    <constraint firstItem="cJp-kY-wHz" firstAttribute="centerX" secondItem="bU6-Pv-KiR" secondAttribute="centerX" id="biW-wn-fav"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5V-rJ-b8C">
+                                <rect key="frame" x="16" y="64" width="288" height="284"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Lyl-ET-KTQ">
+                                        <rect key="frame" x="73" y="95" width="142" height="95"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of character" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy9-CP-FwY">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.31328389249999999" green="0.18493857050000001" blue="0.52315705130000001" alpha="0.67906788789999994" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
+                                                <rect key="frame" x="13" y="65" width="117" height="31"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="0.45325969830000001" colorSpace="calibratedRGB"/>
+                                                <segments>
+                                                    <segment title="Male"/>
+                                                    <segment title="Female"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.7372195512820513" green="0.7372195512820513" blue="0.7372195512820513" alpha="0.29453125000000002" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.52424568969999996" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Ready!"/>
-                                <connections>
-                                    <action selector="readyButtonTapped:" destination="blw-AX-SL7" eventType="touchUpInside" id="lCa-xL-BjX"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
-                                <rect key="frame" x="101" y="207" width="119" height="29"/>
-                                <animations/>
-                                <segments>
-                                    <segment title="Male"/>
-                                    <segment title="Female"/>
-                                </segments>
-                            </segmentedControl>
+                                <color key="backgroundColor" red="0.94697516025641026" green="0.94697516025641026" blue="0.94697516025641026" alpha="0.29453125000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Lyl-ET-KTQ" firstAttribute="centerX" secondItem="g5V-rJ-b8C" secondAttribute="centerX" id="7yS-S0-t9y"/>
+                                    <constraint firstItem="Lyl-ET-KTQ" firstAttribute="centerY" secondItem="g5V-rJ-b8C" secondAttribute="centerY" id="b7K-wk-fh7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="20" id="23p-aF-Ni0"/>
+                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" id="5f8-OO-Rfg"/>
+                            <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="bU6-Pv-KiR" secondAttribute="bottom" id="7sP-sc-CW6"/>
+                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="height" secondItem="bET-do-rvq" secondAttribute="height" multiplier="0.5" id="DKP-b7-lgV"/>
+                            <constraint firstItem="bU6-Pv-KiR" firstAttribute="height" secondItem="bET-do-rvq" secondAttribute="height" multiplier="0.5" id="K5D-vB-ZGc"/>
+                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" id="MGF-a2-Imb"/>
+                            <constraint firstItem="bU6-Pv-KiR" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" id="MuG-kf-74r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bU6-Pv-KiR" secondAttribute="trailing" constant="10" id="Sea-CV-DW4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bU6-Pv-KiR" secondAttribute="trailing" id="SqU-9i-wyq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g5V-rJ-b8C" secondAttribute="trailing" constant="20" id="TuS-Iv-SGF"/>
+                            <constraint firstItem="bU6-Pv-KiR" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="30" id="aL6-2g-nIh"/>
+                            <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="bU6-Pv-KiR" secondAttribute="bottom" constant="66" id="pC5-WU-9qd"/>
+                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" constant="49" id="sG6-ua-CSb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g5V-rJ-b8C" secondAttribute="trailing" id="z2w-CO-rrw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="23p-aF-Ni0"/>
+                                <exclude reference="TuS-Iv-SGF"/>
+                                <exclude reference="sG6-ua-CSb"/>
+                                <exclude reference="Sea-CV-DW4"/>
+                                <exclude reference="aL6-2g-nIh"/>
+                                <exclude reference="pC5-WU-9qd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

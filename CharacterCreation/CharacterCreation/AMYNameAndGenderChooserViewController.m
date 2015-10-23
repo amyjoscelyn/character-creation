@@ -26,6 +26,11 @@
     [super viewDidLoad];
 }
 
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [self.nameTextField resignFirstResponder];
+//}
+
 - (IBAction)readyButtonTapped:(id)sender
 {
     self.sharedCharacter = [AMYCharacterCreated sharedCharacter];
