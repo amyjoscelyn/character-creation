@@ -22,6 +22,7 @@
                                 <rect key="frame" x="16" y="64" width="288" height="284"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -36,7 +37,9 @@
                                             <constraint firstAttribute="width" constant="125" id="nmw-qJ-3h0"/>
                                             <constraint firstAttribute="height" constant="75" id="xbB-g9-bz6"/>
                                         </constraints>
-                                        <state key="normal" title="Ready!"/>
+                                        <state key="normal" title="Ready!">
+                                            <color key="titleColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="blw-AX-SL7" kind="show" identifier="readyToPickANameSegue" id="QcS-61-nGt"/>
                                         </connections>
@@ -50,7 +53,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-dN-11O">
-                                <rect key="frame" x="40" y="97" width="240" height="217"/>
+                                <rect key="frame" x="80" y="77" width="240" height="217"/>
                                 <animations/>
                                 <string key="text">I would like to add a frame to make it prettier around the outside and not so flat, maybe get the purple of a velvet dress as background, work on gradients, perhaps, and a gradient to the frame as well.  Like a nice gold or silver with shine.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,7 +121,9 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="SDt-Qh-lFx"/>
                                             <constraint firstAttribute="width" constant="98" id="jZ4-dH-eR4"/>
                                         </constraints>
-                                        <state key="normal" title="Ready!"/>
+                                        <state key="normal" title="Ready!">
+                                            <color key="titleColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="jZ4-dH-eR4"/>
@@ -146,6 +151,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -157,6 +163,7 @@
                                                     <segment title="Male"/>
                                                     <segment title="Female"/>
                                                 </segments>
+                                                <color key="tintColor" red="0.39643222620364255" green="0.28720562451586601" blue="0.54453125000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </segmentedControl>
                                         </subviews>
                                         <animations/>
