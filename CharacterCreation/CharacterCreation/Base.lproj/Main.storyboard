@@ -85,6 +85,14 @@
                                     <constraint firstAttribute="height" constant="8" id="oXd-OQ-mMu"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="۝" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="54W-PC-e53">
+                                <rect key="frame" x="-4" y="56" width="30" height="49"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +103,6 @@
                             <constraint firstItem="ISu-pC-p3s" firstAttribute="top" secondItem="zMl-eF-Fcl" secondAttribute="top" id="HCg-Mb-X5b"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HeM-s1-OQZ"/>
                             <constraint firstItem="koT-WB-XzU" firstAttribute="leading" secondItem="J6b-Db-ktz" secondAttribute="trailing" constant="-40" id="Hew-Iz-qSd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ISu-pC-p3s" secondAttribute="trailing" constant="8" id="MQF-iL-l56"/>
                             <constraint firstItem="ISu-pC-p3s" firstAttribute="leading" secondItem="koT-WB-XzU" secondAttribute="trailing" constant="-40" id="N38-py-YkV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XGG-hs-BX2" secondAttribute="trailing" constant="-20" id="NWi-1l-ctY"/>
                             <constraint firstItem="J6b-Db-ktz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NeB-T5-mqF"/>
@@ -103,8 +110,6 @@
                             <constraint firstItem="XGG-hs-BX2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="QRY-Y7-GVS"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="QY5-sU-CuX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="koT-WB-XzU" secondAttribute="bottom" constant="28" id="Qx4-eL-b3J"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="koT-WB-XzU" secondAttribute="bottom" constant="-28" id="ROW-Mj-QZc"/>
-                            <constraint firstItem="J6b-Db-ktz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="aLj-2o-5ds"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" id="e1A-kE-9gN"/>
                             <constraint firstItem="XGG-hs-BX2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kQL-RM-2WY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J6b-Db-ktz" secondAttribute="bottom" id="p0f-Ny-YhF"/>
@@ -113,13 +118,6 @@
                             <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xGE-ZP-xcI"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ISu-pC-p3s" secondAttribute="bottom" id="ypA-6n-yoP"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="aLj-2o-5ds"/>
-                                <exclude reference="MQF-iL-l56"/>
-                                <exclude reference="ROW-Mj-QZc"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="m1D-k6-DV4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
