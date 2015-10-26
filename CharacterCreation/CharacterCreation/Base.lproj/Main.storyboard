@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MiX-cd-wk5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MiX-cd-wk5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -26,7 +26,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-dn-BUy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN1-dn-BUy" userLabel="Bottom Half View">
                                 <rect key="frame" x="16" y="284" width="288" height="284"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2o-Bc-mP1">
@@ -52,43 +52,52 @@
                                     <constraint firstItem="U2o-Bc-mP1" firstAttribute="centerX" secondItem="dN1-dn-BUy" secondAttribute="centerX" id="ted-l6-HHh"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zhA-dN-11O">
-                                <rect key="frame" x="80" y="77" width="240" height="217"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6b-Db-ktz" userLabel="Left Frame">
+                                <rect key="frame" x="20" y="64" width="8" height="504"/>
                                 <animations/>
-                                <string key="text">I would like to add a frame to make it prettier around the outside and not so flat, maybe get the purple of a velvet dress as background, work on gradients, perhaps, and a gradient to the frame as well.  Like a nice gold or silver with shine.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="Wq9-ho-ZnM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISu-pC-p3s" userLabel="Right Frame">
+                                <rect key="frame" x="288" y="64" width="8" height="504"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="M9x-Je-pb4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-hs-BX2" userLabel="Top Frame">
+                                <rect key="frame" x="-4" y="76" width="328" height="8"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="y3G-XP-I8n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dN1-dn-BUy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="3ir-4Z-Wuo"/>
-                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Fru-42-2Ln"/>
+                            <constraint firstItem="ISu-pC-p3s" firstAttribute="top" secondItem="zMl-eF-Fcl" secondAttribute="top" id="HCg-Mb-X5b"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HeM-s1-OQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ISu-pC-p3s" secondAttribute="trailing" constant="8" id="MQF-iL-l56"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XGG-hs-BX2" secondAttribute="trailing" constant="-20" id="NWi-1l-ctY"/>
+                            <constraint firstItem="J6b-Db-ktz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NeB-T5-mqF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dN1-dn-BUy" secondAttribute="trailing" id="OR3-5B-kk2"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="QY5-sU-CuX"/>
+                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="XGG-hs-BX2" secondAttribute="bottom" constant="-20" id="Qfw-Rt-iCT"/>
+                            <constraint firstItem="J6b-Db-ktz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="aLj-2o-5ds"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" id="e1A-kE-9gN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dN1-dn-BUy" secondAttribute="trailing" constant="20" id="g1L-H7-CxB"/>
-                            <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="h6n-nd-cyB"/>
-                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="k0V-6D-Fbn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zMl-eF-Fcl" secondAttribute="trailing" constant="20" id="nH5-l4-OZV"/>
+                            <constraint firstItem="XGG-hs-BX2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kQL-RM-2WY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J6b-Db-ktz" secondAttribute="bottom" id="p0f-Ny-YhF"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uoi-dr-hXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zMl-eF-Fcl" secondAttribute="trailing" id="wdO-QX-D7f"/>
                             <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xGE-ZP-xcI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" constant="54" id="xWo-2D-jPG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ISu-pC-p3s" secondAttribute="bottom" id="ypA-6n-yoP"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Fru-42-2Ln"/>
-                                <exclude reference="k0V-6D-Fbn"/>
-                                <exclude reference="nH5-l4-OZV"/>
-                                <exclude reference="g1L-H7-CxB"/>
-                                <exclude reference="h6n-nd-cyB"/>
-                                <exclude reference="xWo-2D-jPG"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="m1D-k6-DV4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -527,6 +536,14 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-cb-ywK">
+                                <rect key="frame" x="47" y="427" width="240" height="133"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I would like to add frames to each of these views, then also see if I can find a nice graphic on unichar to put in the corners, even if it's as simple as the three-dot therefore symbol.  A flowery corner edge would be nicer though.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
