@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6b-Db-ktz" userLabel="Left Frame">
-                                <rect key="frame" x="20" y="64" width="8" height="504"/>
+                                <rect key="frame" x="24" y="64" width="8" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -69,11 +69,20 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-hs-BX2" userLabel="Top Frame">
-                                <rect key="frame" x="-4" y="76" width="328" height="8"/>
+                                <rect key="frame" x="-4" y="92" width="328" height="8"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="y3G-XP-I8n"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koT-WB-XzU" userLabel="Bottom Frame">
+                                <rect key="frame" x="-8" y="532" width="336" height="8"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="eaI-yj-iBj"/>
+                                    <constraint firstAttribute="height" constant="8" id="oXd-OQ-mMu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -81,15 +90,21 @@
                         <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dN1-dn-BUy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="3ir-4Z-Wuo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="koT-WB-XzU" secondAttribute="trailing" constant="-24" id="6CC-bQ-4yG"/>
+                            <constraint firstItem="koT-WB-XzU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-24" id="EwS-gs-cgw"/>
                             <constraint firstItem="ISu-pC-p3s" firstAttribute="top" secondItem="zMl-eF-Fcl" secondAttribute="top" id="HCg-Mb-X5b"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HeM-s1-OQZ"/>
+                            <constraint firstItem="koT-WB-XzU" firstAttribute="leading" secondItem="J6b-Db-ktz" secondAttribute="trailing" constant="-40" id="Hew-Iz-qSd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ISu-pC-p3s" secondAttribute="trailing" constant="8" id="MQF-iL-l56"/>
+                            <constraint firstItem="ISu-pC-p3s" firstAttribute="leading" secondItem="koT-WB-XzU" secondAttribute="trailing" constant="-40" id="N38-py-YkV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XGG-hs-BX2" secondAttribute="trailing" constant="-20" id="NWi-1l-ctY"/>
                             <constraint firstItem="J6b-Db-ktz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NeB-T5-mqF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dN1-dn-BUy" secondAttribute="trailing" id="OR3-5B-kk2"/>
+                            <constraint firstItem="XGG-hs-BX2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="QRY-Y7-GVS"/>
                             <constraint firstItem="zMl-eF-Fcl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="QY5-sU-CuX"/>
-                            <constraint firstItem="zMl-eF-Fcl" firstAttribute="top" secondItem="XGG-hs-BX2" secondAttribute="bottom" constant="-20" id="Qfw-Rt-iCT"/>
-                            <constraint firstItem="J6b-Db-ktz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="aLj-2o-5ds"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="koT-WB-XzU" secondAttribute="bottom" constant="28" id="Qx4-eL-b3J"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="koT-WB-XzU" secondAttribute="bottom" constant="-28" id="ROW-Mj-QZc"/>
+                            <constraint firstItem="J6b-Db-ktz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="aLj-2o-5ds"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dN1-dn-BUy" secondAttribute="bottom" id="e1A-kE-9gN"/>
                             <constraint firstItem="XGG-hs-BX2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kQL-RM-2WY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J6b-Db-ktz" secondAttribute="bottom" id="p0f-Ny-YhF"/>
@@ -98,6 +113,13 @@
                             <constraint firstItem="dN1-dn-BUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xGE-ZP-xcI"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ISu-pC-p3s" secondAttribute="bottom" id="ypA-6n-yoP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aLj-2o-5ds"/>
+                                <exclude reference="MQF-iL-l56"/>
+                                <exclude reference="ROW-Mj-QZc"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="m1D-k6-DV4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
