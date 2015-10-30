@@ -238,7 +238,6 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="isy-Bw-9ot" secondAttribute="trailing" constant="-24" id="12d-9g-e5h"/>
-                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="20" id="23p-aF-Ni0"/>
                             <constraint firstItem="QQP-Jc-4vN" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" constant="28" id="4Zv-G4-rSl"/>
                             <constraint firstItem="g5V-rJ-b8C" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" id="5f8-OO-Rfg"/>
                             <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="bU6-Pv-KiR" secondAttribute="bottom" id="7sP-sc-CW6"/>
@@ -249,35 +248,16 @@
                             <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" id="MGF-a2-Imb"/>
                             <constraint firstItem="bU6-Pv-KiR" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" id="MuG-kf-74r"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Eeq-bq-qKp" secondAttribute="bottom" id="Nb6-zx-ZJL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bU6-Pv-KiR" secondAttribute="trailing" constant="10" id="Sea-CV-DW4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bU6-Pv-KiR" secondAttribute="trailing" id="SqU-9i-wyq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QQP-Jc-4vN" secondAttribute="trailing" constant="-24" id="T3e-Zq-m5A"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g5V-rJ-b8C" secondAttribute="trailing" constant="20" id="TuS-Iv-SGF"/>
                             <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="pgR-xU-zdq" secondAttribute="bottom" id="Y1l-pb-5AK"/>
-                            <constraint firstItem="bU6-Pv-KiR" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="30" id="aL6-2g-nIh"/>
-                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="Eeq-bq-qKp" secondAttribute="trailing" constant="256" id="c9T-fC-xfb"/>
                             <constraint firstItem="isy-Bw-9ot" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="-24" id="dbv-ay-Ugw"/>
-                            <constraint firstItem="Eeq-bq-qKp" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="-16" id="g0n-Re-h58"/>
                             <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="isy-Bw-9ot" secondAttribute="bottom" constant="28" id="nSa-Lr-lof"/>
-                            <constraint firstItem="4eb-Kl-FGV" firstAttribute="top" secondItem="bU6-Pv-KiR" secondAttribute="bottom" constant="66" id="pC5-WU-9qd"/>
-                            <constraint firstItem="g5V-rJ-b8C" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" constant="49" id="sG6-ua-CSb"/>
                             <constraint firstItem="QQP-Jc-4vN" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="-24" id="xmT-vI-jDS"/>
                             <constraint firstItem="pgR-xU-zdq" firstAttribute="top" secondItem="bET-do-rvq" secondAttribute="topMargin" id="yZm-NZ-lfT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g5V-rJ-b8C" secondAttribute="trailing" id="z2w-CO-rrw"/>
                             <constraint firstItem="Eeq-bq-qKp" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="4" id="zku-sL-JPC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="23p-aF-Ni0"/>
-                                <exclude reference="TuS-Iv-SGF"/>
-                                <exclude reference="c9T-fC-xfb"/>
-                                <exclude reference="sG6-ua-CSb"/>
-                                <exclude reference="g0n-Re-h58"/>
-                                <exclude reference="Sea-CV-DW4"/>
-                                <exclude reference="aL6-2g-nIh"/>
-                                <exclude reference="pC5-WU-9qd"/>
-                            </mask>
-                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="qJq-EN-Bj9" appends="YES" id="aJ3-UV-tYg"/>
                         </connections>
@@ -612,7 +592,7 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFu-BK-1GN" userLabel="Left Frame">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFu-BK-1GN" userLabel="Right Frame">
                                 <rect key="frame" x="288" y="64" width="8" height="504"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -637,7 +617,7 @@
                                     <constraint firstAttribute="height" constant="8" id="UhZ-DC-K2Q"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-n3-0xe" userLabel="Top Frame">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-n3-0xe" userLabel="Bottom Frame">
                                 <rect key="frame" x="-8" y="534" width="336" height="8"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
