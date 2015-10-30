@@ -37,6 +37,7 @@
                                             <constraint firstAttribute="width" constant="125" id="nmw-qJ-3h0"/>
                                             <constraint firstAttribute="height" constant="75" id="xbB-g9-bz6"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Ready!">
                                             <color key="titleColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -85,14 +86,6 @@
                                     <constraint firstAttribute="height" constant="8" id="oXd-OQ-mMu"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="۝" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="54W-PC-e53">
-                                <rect key="frame" x="-4" y="56" width="30" height="49"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.19076438089449688" green="0.019018733440384829" blue="0.33213141025641024" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,6 +143,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="SDt-Qh-lFx"/>
                                             <constraint firstAttribute="width" constant="98" id="jZ4-dH-eR4"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Ready!">
                                             <color key="titleColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -174,18 +168,18 @@
                                 <rect key="frame" x="16" y="64" width="288" height="284"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Lyl-ET-KTQ">
-                                        <rect key="frame" x="73" y="95" width="142" height="95"/>
+                                        <rect key="frame" x="62" y="95" width="164" height="95"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of character" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy9-CP-FwY">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="30"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-MY-nq2">
-                                                <rect key="frame" x="13" y="65" width="117" height="31"/>
+                                                <rect key="frame" x="24" y="65" width="117" height="31"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                                 <segments>
@@ -209,6 +203,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="g5V-rJ-b8C" firstAttribute="leading" secondItem="bET-do-rvq" secondAttribute="leadingMargin" constant="20" id="23p-aF-Ni0"/>
                             <constraint firstItem="g5V-rJ-b8C" firstAttribute="top" secondItem="Jb6-aW-xAR" secondAttribute="bottom" id="5f8-OO-Rfg"/>
@@ -235,6 +230,9 @@
                                 <exclude reference="pC5-WU-9qd"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qJq-EN-Bj9" appends="YES" id="aJ3-UV-tYg"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -244,6 +242,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuV-uV-vSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qJq-EN-Bj9">
+                    <connections>
+                        <action selector="viewTapped:" destination="blw-AX-SL7" id="Xgh-Oa-CKN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1480" y="327"/>
         </scene>
@@ -524,29 +527,29 @@
                                         </variation>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J1q-92-fdR" userLabel="Minor Stack">
-                                        <rect key="frame" x="12" y="195" width="96" height="165"/>
+                                        <rect key="frame" x="4" y="195" width="113" height="165"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldf-hS-6KE">
-                                                <rect key="frame" x="13" y="0.0" width="71" height="55"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldf-hS-6KE">
+                                                <rect key="frame" x="10" y="0.0" width="92" height="55"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo2-XM-QU6">
-                                                <rect key="frame" x="26" y="55" width="45" height="55"/>
+                                                <rect key="frame" x="21" y="55" width="70" height="55"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                 <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to the world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXZ-de-62d">
-                                                <rect key="frame" x="0.0" y="110" width="96" height="55"/>
+                                                <rect key="frame" x="0.0" y="110" width="113" height="55"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.92327290969999998" green="0.94601362180000004" blue="0.90053219770000004" alpha="0.68906250000000002" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -556,19 +559,20 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-cb-ywK">
-                                <rect key="frame" x="47" y="427" width="240" height="133"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCf-4R-5S0">
+                                <rect key="frame" x="100" y="104" width="120" height="165"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">I would like to add frames to each of these views, then also see if I can find a nice graphic on unichar to put in the corners, even if it's as simple as the three-dot therefore symbol.  A flowery corner edge would be nicer though.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <color key="backgroundColor" red="0.1176470588" green="0.039215686270000001" blue="0.20392156859999999" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.1907643809" green="0.019018733440000001" blue="0.33213141029999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="CCf-4R-5S0" firstAttribute="centerY" secondItem="frd-fA-cgD" secondAttribute="centerY" id="IB2-Rv-t1N"/>
+                            <constraint firstItem="CCf-4R-5S0" firstAttribute="width" secondItem="frd-fA-cgD" secondAttribute="width" id="YuQ-UZ-LEV"/>
+                            <constraint firstItem="CCf-4R-5S0" firstAttribute="height" secondItem="frd-fA-cgD" secondAttribute="height" id="fic-SH-s6j"/>
                             <constraint firstItem="OqR-fT-JeH" firstAttribute="centerY" secondItem="mmc-Wo-Ogf" secondAttribute="centerY" id="kKs-1N-Nn5"/>
+                            <constraint firstItem="CCf-4R-5S0" firstAttribute="centerX" secondItem="frd-fA-cgD" secondAttribute="centerX" id="m3j-S5-4KT"/>
                             <constraint firstItem="OqR-fT-JeH" firstAttribute="centerX" secondItem="mmc-Wo-Ogf" secondAttribute="centerX" id="ubn-r4-5XD"/>
                         </constraints>
                     </view>

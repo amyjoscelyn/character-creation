@@ -26,6 +26,11 @@
     [super viewDidLoad];
 }
 
+- (IBAction)viewTapped:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{
 //    [self.nameTextField resignFirstResponder];
